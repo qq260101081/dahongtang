@@ -27,6 +27,15 @@ use \kartik\file\FileInput;
             ]
         ]); ?>
 
+        <?= $form->field($model, 'category', [
+            //'options'=> ['class'=>'col-sm-2'],
+            //'template' => '{label} <div class="col-sm-2">{input}{error}{hint}</div>'
+        ])->dropDownList([
+            '' => '请选择分类',
+            '茶叶'=>'茶叶',
+            '茶具'=>'茶具',
+            '单品'=>'单品',
+        ]) ?>
         <?= $form->field($model, 'name')->textInput() ?>
         <?= $form->field($model, 'subtitle')->textInput() ?>
         <?= $form->field($model, 'season')->textInput() ?>

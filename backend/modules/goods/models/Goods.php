@@ -30,8 +30,10 @@ class Goods extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name','subtitle','list_pic','season','spec','type','craft','price','created_at'], 'safe'],
+            [['name','subtitle','list_pic','season','spec','type','craft','price','category','created_at'], 'safe'],
             //['created_at', 'default', 'value' => time()]
+            [['category'], 'required'],
+
         ];
     }
 
@@ -50,6 +52,7 @@ class Goods extends \yii\db\ActiveRecord
             'type' => Yii::t('app', '类型'),
             'craft' => Yii::t('app', '工艺'),
             'price' => Yii::t('app', '价格'),
+            'category' => Yii::t('app', '分类'),
             'created_at' => Yii::t('app', '创建时间'),
         ];
     }

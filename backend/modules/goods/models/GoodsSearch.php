@@ -18,7 +18,7 @@ class GoodsSearch extends Goods
     public function rules()
     {
         return [
-            [['id','name', 'type'], 'safe'],
+            [['id','name', 'type', 'category'], 'safe'],
         ];
     }
 
@@ -59,7 +59,7 @@ class GoodsSearch extends Goods
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'name' => $this->name,
+            'category' => $this->category,
         ]);
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'type', $this->type]);
