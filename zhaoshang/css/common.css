@@ -1,0 +1,256 @@
+﻿/*
+------------------------------- 
+Site:        所有页面通用的样式以及公用部分样式，请不要修改里边的属性及数值。
+Author:      yanglimiao   Vic 
+Updated:     2015-11-5
+relation:    408072217
+Updated by:
+-------------------------------
+*/ /*=======CSS reset start=======*/
+body {
+	font-size: 0.8rem;
+	font-family:"Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif; 
+	color:#333;
+}
+body{
+            /*
+            首先不支持绝对路径，只支持相对路径。
+            其次，是相对于当前ASPX网页的相对路径，和CSS文件的位置无关。 
+            */
+            behavior: url(css/hover.htc); /*可在IE6,7中对非<a>元素使用hover等伪类*/
+        }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td
+	{
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	color: #959595;
+	text-align: center;
+}
+fieldset,img {border: none;}
+address,caption,cite,code,dfn,th,var {font-style: normal;font-weight: normal;}
+ol,ul,li {list-style-type: none;}
+caption,th {text-align: left;}
+h1,h2,h3,h4,h5,h6 {font-size: 100%;}
+q:before,q:after {content: '';}
+abbr,acronym {border: 0;}
+a {color:#333333;text-decoration: none}
+a:hover {color:#ffc124;}
+.hidd {display: none;}
+/*=======CSS reset end=======*/ /*=======文字排版 start======*/
+.f12 {font-size: 12px;}
+.f13 {font-size: 13px;}
+.f14 {font-size: 14px;}
+.f15 {font-size: 15px;}
+.f16 {font-size: 16px;}
+.f18 {font-size: 18px;}
+.f20 {font-size: 20px;}
+.f24 {font-size: 24px;}
+.f30 {font-size: 30px;}
+.f36 {font-size: 36px;}
+.fb {font-weight: bold;}
+.fn {font-weight: normal;}
+
+.lh20 {line-height: 20px;}
+.lh24 {line-height: 24px;}
+.lh30 {line-height: 30px;}
+.lh40 {line-height: 40px;}
+.lh50 {line-height: 50px;}
+.lh60 {line-height: 60px;}
+.lh150 {line-height: 150%;}
+.lh180 {line-height: 180%;}
+.lh200 {line-height: 200%;}
+.lh250 {line-height: 250%;}
+.lh300 {line-height: 300%;}
+
+.unl {text-decoration: underline;}
+.no_unl {text-decoration: none;}
+
+
+/*===========文字颜色 end==========*/ /*=======定位 start======*/
+.tl {text-align: left;}
+.tc {text-align: center;}
+.tr {text-align: right;}
+.fl {float: left;}
+.fr {float: right;display: inline;}
+.cb {clear: both;}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.vm {vertical-align: middle;}
+.vt {vertical-align: top;}
+.pr {position: relative;}
+.pa {position: absolute;}
+.abs-right {position: absolute;right: 0;}
+.zoom {zoom: 1;}
+.hidden {visibility: hidden;}
+.dn {display: none;}
+
+/*=======定位 end======*/ /*=======长度高度 start======*/
+.w {width: 100%;}
+.h {height: 100%;}
+.overflow {overflow: hidden;}
+
+/*=======长度高度 end======*/ /*=======边距 start======*/
+.ma {margin-left: auto; margin-right: auto;}
+.m5 {margin: 5px;_margin:5px 4px;}
+.m10 {margin: 10px;}
+.ml5{ margin-left:5px;}
+.m15 {margin: 15px;}
+
+.m30 {margin: 30px;}
+.mt5 {margin-top: 5px;}
+
+.mt10 {margin-top: 10px;}
+.mt15 {margin-top: 15px;}
+.mt20 {margin-top: 20px;}
+.mt30 {margin-top: 30px;}
+.mt40 {margin-top: 40px;}
+.mt50 {margin-top: 50px;}
+.mt60 {margin-top: 60px;}
+
+.mt90 {margin-top: 90px;}
+
+.mt100 {margin-top: 100px;}
+
+.mb5 {margin-bottom: 5px;}
+
+.mb10 {
+	margin-bottom: 10px;
+}
+.mb15 {margin-bottom: 15px;}
+.mb20 {margin-bottom: 20px;}
+.mb30 {margin-bottom: 30px;}
+.mb50 {margin-bottom: 50px;}
+.mb60 {margin-bottom: 60px;}
+.mb100 {margin-bottom: 100px;}
+.ml5 {margin-left: 5px;}
+.ml10 {margin-left: 10px;}
+.ml15 {margin-left: 15px;}
+.ml20 {margin-left: 20px;}
+.ml30 {margin-left: 30px;}
+.ml40 {margin-left: 40px;}
+.ml50 {margin-left: 50px;}
+.ml60 {margin-left: 60px;}
+.ml100 {margin-left: 100px;}
+.ml150 {margin-left: 150px;}
+.mr5 {margin-right: 5px;}
+.mr10 {margin-right: 10px;}
+.mr20 {margin-right: 20px;}
+.mr30 {margin-right: 30px;}
+.mr50 {margin-right: 50px;}
+.mr100 {margin-right: 100px;}
+.p10 {padding: 10px;}
+.p4 {padding: 4px;}
+.p5 {
+	padding: 5px;
+}
+.p15 {padding: 15px;}
+.p20 {padding: 20px;}
+.p20-15 {padding: 20px 15px;}
+.pt5 {padding-top: 5px;}
+.pt10 {padding-top: 10px;}
+.pt15 {padding-top: 15px;}
+.pt20 {padding-top: 20px;}
+.pt30 {padding-top: 30px;}
+.pt50 {padding-top: 50px;}
+.pt60 {padding-top: 60px;}
+.pt100 {padding-top: 100px;}
+.pb5 {padding-bottom: 5px;}
+.pb10 {
+	padding-bottom: 10px;
+}
+
+.pb20 {
+	padding-bottom: 20px;
+}
+
+.pb30 {
+	padding-bottom: 30px;
+}
+
+.pb50 {
+	padding-bottom: 50px;
+}
+
+.pb100 {padding-bottom: 100px;}
+.pl5 {padding-left: 5px;}
+.pl10 {padding-left: 10px;}
+.pl15 {padding-left: 15px;}
+.pl20 {padding-left: 20px;}
+.pl30 {padding-left: 30px;}
+.pl50 {padding-left: 50px;}
+
+.pl80 {
+	padding-left: 80px;
+}
+
+.pl100 {
+	padding-left: 100px;
+}
+
+.pr5 {
+	padding-right: 5px;
+}
+.pr0 {
+	padding-right: 0px;
+}
+.pr10 {
+	padding-right: 10px;
+}
+
+.pr20 {
+	padding-right: 20px;
+}
+
+.pr30 {
+	padding-right: 30px;
+}
+
+.pr50 {
+	padding-right: 50px;
+}
+
+.pr100 {padding-right: 100px;}
+/*=======边距 end======*/
+
+/*=======边框 start======*/
+.br{ 
+    border:1px solid #dadada;
+	box-shadow: 0 0px 1px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 0px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 0px 1px rgba(0,0,0,0.1);
+	-webkit-transition: top 1s ease, left 1s ease;
+	-moz-transition: top 1s ease, left 1s ease;
+	-o-transition: top 1s ease, left 1s ease;
+	-ms-transition: top 1s ease, left 1s ease;
+}
+.bbd{border-bottom:1px dashed #d6d6d6;}
+.bsd{border-bottom:1px solid #c0c0c0;}
+.bls{border-left:1px solid #eee;}
+.bts{border-top:1px solid #d6d6d6;}
+.bbs{border-bottom:1px solid #eee;}
+.brs{border-right:1px solid #eee;}
+.bld{border-left:1px dashed #c0c0c0;}
+.bs{ border:1px solid #e3e3e3;}
+.btd{border-top:1px dashed #d8d8d8;}
+/*=======边框 end======*/
+
+.lv{color:#2bbfd6;}
+.hong{ color:#fc5633;}
+.huang{ color:#fba602;}
+.zi{ color:#3C3;}
+.ceng{ color:#f3d31f;}
+.chong{ color:#ea2f1c;}
+
+.tongy{ width:100%; float:left;}
+
