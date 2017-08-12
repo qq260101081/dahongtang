@@ -12,20 +12,9 @@ use yii\web\Controller;
 class SiteController extends Controller
 {
 
-    public function behaviors()
-    {
-        return array_merge(parent::behaviors(), [
-            'corsFilter' => [
-                'class' => \yii\filters\Cors::className(),
-                'cors' => [
-                    'Origin' => '*',
-                    'Access-Control-Request-Method' => ['POST'],
-                    'Access-Control-Allow-Credentials' => true,
-                    'Access-Control-Max-Age' => 86400,
-
-                ],
-            ],
-        ]);
+    public function beforeAction($action){
+        header("Access-Control-Allow-Origin: *");
+        return parent::beforeAction($action);
     }
 
 
@@ -36,19 +25,19 @@ class SiteController extends Controller
 
     public function actionTe()
     {
-        $post = Yii::$app->request->post();
-        $name = isset($post['name']) ? $post['name'] : '';
-        $tel = isset($post['tel']) ? $post['tel'] : '';
-        $wx = isset($post['wx']) ? $post['wx'] : '';
-        $address = isset($post['address']) ? $post['address'] : '';
+        $get = Yii::$app->request->get();
+        $name = isset($get['name']) ? $get['name'] : '';
+        $tel = isset($get['tel']) ? $get['tel'] : '';
+        $wx = isset($get['wx']) ? $get['wx'] : '';
+        $address = isset($get['address']) ? $get['address'] : '';
 
-        $content = $name . "\n" . $tel . "\n" . $wx . "\n" . $address;
+        $content = '姓名：'.$name . "\n电话：" . $tel . "\n微信" . $wx . "\n地区：" . $address;
         $info = Yii::$app->mailer->compose()
-            ->setTo('408072217@qq.com')  //对方的邮箱
+            ->setTo('260101081@qq.com')  //对方的邮箱
             ->setSubject('在线申请加盟')
             ->setTextBody($content)
             ->send(); 
-        die(json_encode(['msg' => $info]));
+        die(json_encode(['flag' => $info]));
     }
 
 }

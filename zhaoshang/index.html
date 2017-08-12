@@ -466,7 +466,7 @@
                 	<span class="from-ts">地区：</span>
                     <input type="text" id="address" class="biaod"/>
                 </li>
-               	<li><a href="#" id="submit" class="tijiao">提交</a></li>
+               	<li><a href="javascript:;" id="submit" class="tijiao">提交</a></li>
                 <li><span class="chong">成功提交信息后24小时内，会有工作人员与您联系！</span></li>
             </ul>
         </div>
@@ -488,9 +488,12 @@
             wx: $('#wx').val(),
             address: $('#address').val(),
         };
-        $.post(url, data, function (res) {
-            console.log(res.msg);
-        });
+        $.get(url, data, function (res) {
+            if(res.flag)
+                alert('提交成功');
+            else
+                alert('提交失败');
+        }, 'json');
     });
 </script>
 </body>
