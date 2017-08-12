@@ -12,11 +12,23 @@ use yii\web\Controller;
 class SiteController extends Controller
 {
 
-    /**
-     * Displays homepage.
-     *
-     * @return mixed
-     */
+    public function behaviors()
+    {
+        return array_merge(parent::behaviors(), [
+            'corsFilter' => [
+                'class' => \yii\filters\Cors::className(),
+                'cors' => [
+                    'Origin' => '*',
+                    'Access-Control-Request-Method' => ['POST'],
+                    'Access-Control-Allow-Credentials' => true,
+                    'Access-Control-Max-Age' => 86400,
+
+                ],
+            ],
+        ]);
+    }
+
+
     public function actionIndex()
     {
         echo 1;die;
@@ -24,8 +36,6 @@ class SiteController extends Controller
 
     public function actionTe()
     {
-        header("Access-Control-Allow-Origin: *");
-
         $post = Yii::$app->request->post();
         $name = isset($post['name']) ? $post['name'] : '';
         $tel = isset($post['tel']) ? $post['tel'] : '';
