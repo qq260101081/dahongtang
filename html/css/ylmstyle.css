@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+body{margin:0; font-family: "微软雅黑",'Microsoft';}
 @font-face {
   font-family: 'iconfont';  /* project id 363964 */
   src: url('http://at.alicdn.com/t/font_d8ui6g5xd0od2t9.eot');
@@ -99,3 +100,23 @@ p{ margin-bottom:0 !important;}
 .chanp-nav ul li{display: block;float: left;width: 100%;line-height: 40px; color: #fff;}
 .chanp-nav ul li a{ color:#fff; text-decoration: none;}
 .chanp-nav ul li a:hover{ color:#d74b40;}
+
+.mianl{ width:980px; margin:0 auto;}
+.contento{ width:980px; float:left; color:#616161; margin-bottom:40px;}
+.contento .title{ width:100%; float:left; text-align:center; font-size:1.4rem; font-weight:bold; color:#000; line-height:60px;}
+.contento .title02{ width:100%; float:left; text-align:center;  line-height:46px; border-bottom:1px solid #E0E0E0;}
+.texto{ width:100%; float:left; text-indent:25px; line-height:40px; font-size:1rem; margin-top:30px; }
+.topg{ width:100%; float:left; background-color:#9e3427; text-align:center; margin-bottom:10px; position:relative;}
+.topg a{
+	display: inline-block;
+	float: left;
+	border: 1px solid #F7F7F7;
+	border-radius: 5px;
+	line-height:30px;
+	padding: 0 15px;
+	color: #fff;
+	position: absolute;
+	left: 10px;
+	top: 25px;
+	text-decoration: none;
+}

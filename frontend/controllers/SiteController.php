@@ -22,15 +22,23 @@ class SiteController extends Controller
         echo 1;die;
     }
 
-    public function actionSendEmail()
+    public function actionSendMail()
     {
-        
+        header("Access-Control-Allow-Origin: *");
+
+        $post = Yii::$app->request->post();
+        $name = isset($post['name']) ? $post['name'] : '';
+        $tel = isset($post['tel']) ? $post['tel'] : '';
+        $wx = isset($post['wx']) ? $post['wx'] : '';
+        $address = isset($post['address']) ? $post['address'] : '';
+
+        $content = $name . "\n" . $tel . "\n" . $wx . "\n" . $address;
         $info = Yii::$app->mailer->compose()
-            ->setTo('260101081@qq.com')  //对方的邮箱
-            ->setSubject('yii2邮件发送')  
-            ->setTextBody('发送成功')  
+            ->setTo('408072217@qq.com')  //对方的邮箱
+            ->setSubject('在线申请加盟')
+            ->setTextBody($content)
             ->send(); 
-        var_dump($info);
+        die(json_encode(['msg' => $info]));
     }
 
 }
