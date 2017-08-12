@@ -23,7 +23,7 @@ class SiteController extends Controller
         echo 1;die;
     }
 
-    public function actionTe()
+    public function actionSendEmail()
     {
         $get = Yii::$app->request->get();
         $name = isset($get['name']) ? $get['name'] : '';
@@ -33,7 +33,7 @@ class SiteController extends Controller
 
         $content = '姓名：'.$name . "\n电话：" . $tel . "\n微信" . $wx . "\n地区：" . $address;
         $info = Yii::$app->mailer->compose()
-            ->setTo('260101081@qq.com')  //对方的邮箱
+            ->setTo('408072217@qq.com')  //对方的邮箱
             ->setSubject('在线申请加盟')
             ->setTextBody($content)
             ->send(); 
