@@ -22,7 +22,7 @@ class SiteController extends Controller
         echo 1;die;
     }
 
-    public function actionSendMail()
+    public function actionTe()
     {
         header("Access-Control-Allow-Origin: *");
 
