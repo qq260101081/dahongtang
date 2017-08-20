@@ -17,8 +17,8 @@ function getGoods() {
                 cyHtml += '<li>'+
                     '<div class="cp-pic"><a href="'+v.url+'"><img src="'+v.list_pic+'"></a></div>'+
                     '<div class="title-text">'+
-                    v.name+
-                    '<p class="fubiao">'+v.name+'</p>'+
+                    v.name+ ' ' + v.season + ' '+v.type + ' ' + v.craft + ' ' + v.spec+
+                    '<p class="fubiao">'+v.subtitle+'</p>'+
                     '</div>'+
                     '<div class="fl">'+
                     '<span class="jiage">￥'+v.price+'</span>'+
@@ -34,8 +34,8 @@ function getGoods() {
                 cjHtml += '<li>'+
                     '<div class="cp-pic"><a href="'+v.url+'"><img src="'+v.list_pic+'"></a></div>'+
                     '<div class="title-text">'+
-                    v.name+
-                    '<p class="fubiao">'+v.name+'</p>'+
+                    v.name+ ' ' + v.season + ' '+v.type + ' ' + v.craft + ' ' + v.spec+
+                    '<p class="fubiao">'+v.subtitle+'</p>'+
                     '</div>'+
                     '<div class="fl">'+
                     '<span class="jiage">￥'+v.price+'</span>'+
@@ -51,8 +51,8 @@ function getGoods() {
                 dpHtml += '<li>'+
                     '<div class="cp-pic"><a href="'+v.url+'"><img src="'+v.list_pic+'"></a></div>'+
                     '<div class="title-text">'+
-                    v.name+
-                    '<p class="fubiao">'+v.name+'</p>'+
+                    v.name+ ' ' + v.season + ' '+v.type + ' ' + v.craft + ' ' + v.spec+
+                    '<p class="fubiao">'+v.subtitle+'</p>'+
                     '</div>'+
                     '<div class="fl">'+
                     '<span class="jiage">￥'+v.price+'</span>'+
