@@ -65,16 +65,15 @@ function getGoods() {
                     '</li>';
             }
         });
-        $('.chapter__content').eq(0).find('ul').html(cyHtml);
-        $('.chapter__content').eq(1).find('ul').html(cjHtml);
-        $('.chapter__content').eq(2).find('ul').html(dpHtml);
+        $('.chapter__content ul').eq(0).html(cyHtml);
+        $('.chapter__content ul').eq(1).html(cjHtml);
+        $('.chapter__content ul').eq(2).html(dpHtml);
     });
 }
 
 //新闻数据
 function getNews() {
     $.get(newsUrl, function(res){
-		console.log(res);
         var newsHtml = '';
         $.each(res, function (k, v) {
             newsHtml += '<li>'+
