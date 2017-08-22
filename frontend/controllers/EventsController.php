@@ -7,13 +7,13 @@
 
 namespace frontend\controllers;
 
-use Yii;
+use yii;
 use frontend\models\Events;
 use yii\web\Controller;
 use yii\data\Pagination;
 use yii\web\Response;
 
-class EventsController extends Controller
+class EventsController extends BaseController
 {
     public function actionList()
     {

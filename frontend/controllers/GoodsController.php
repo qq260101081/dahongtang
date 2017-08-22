@@ -14,7 +14,7 @@ use yii\data\Pagination;
 use yii\web\Response;
 
 
-class GoodsController extends Controller
+class GoodsController extends BaseController
 {
 
     public function actionList()
