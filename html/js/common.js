@@ -73,6 +73,7 @@ function getGoods() {
 //新闻数据
 function getNews() {
     $.get(newsUrl, function(res){
+		console.log(res);
         var newsHtml = '';
         $.each(res, function (k, v) {
             newsHtml += '<li>'+
