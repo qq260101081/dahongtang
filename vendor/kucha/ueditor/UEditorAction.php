@@ -22,7 +22,7 @@ class UEditorAction extends Action
         $_config = require(__DIR__ . '/config.php');
 
         //添加图片默认root路径；
-        $_config['imageUrlPrefix'] = 'http://api.malldath.com';
+        $_config['imageUrlPrefix'] = 'http://api.dthtea.com';
 
         $_config['imageRoot'] = Yii::getAlias('@webroot');
         $_config['scrawlRoot'] = Yii::getAlias('@webroot');

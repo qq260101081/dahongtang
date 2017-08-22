@@ -1,7 +1,7 @@
 /**
  * Created by carl on 17/8/5.
  */
-var domain = 'http://api.malldth.com';
+var domain = 'http://api.dthtea.com';
 var newsUrl = domain + '?r=events/list&page=1';
 var goodsUrl = domain + '/?r=goods/list&page=1';
 
